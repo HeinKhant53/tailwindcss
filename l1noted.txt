@@ -1,0 +1,75 @@
+https://tailwindcss.com
+
+Integrate  Methods
+1.Using CDN Link ( Content Deliver Network )
+2.Using Tailwind CLI
+3.Using PostCss
+
+
+Terminal = Vs Code
+Nodejs
+
+For Linux
+sudo apt update
+sudo apt upgrade -y
+sudo apt install nodejs
+node - v
+
+
+
+1.Using CDN Link ( Content Deliver Network )
+-<script src="https://cdn.tailwindcss.com"></script>
+-connect --> fontsize ka small 
+
+
+
+3.Using PostCss
+-open folder "using postcss"
+-open Terminal
+ -->npm install -D tailwindcss postcss autoprefixer
+
+
+ -Create tailwind.config.js
+    -->npx tailwindcss init
+
+ -Add PostCss File --> postcss.config.js
+        module.exports = {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        }
+        }
+
+
+Connect  tailwind.config.js to owner using file (public > html,css,js) 
+ -create public folder
+ -go to tailwind.config.js
+ -and write down in content:["./public/**/*.html"]
+
+
+ -create Tailwind main files
+    ->create new folder and naming "tailwind"
+        ->create new file and naming "main.css" in "tailwind" folder
+            @tailwind base;
+            @tailwind components;
+            @tailwind utilities;
+
+
+ -build process
+    ->write down "npm init -y" in terimal (so it's will create package.json)
+
+    ->write down in package.json >
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "build": "tailwind -i ./tailwind/main.css -o ./public/tailwind.css"
+        },
+
+        npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+ Note:
+ . = current folder
+ ** = all folder of inside in public folder
+ * = all html files
+-i = install
+-o = open
+ 
