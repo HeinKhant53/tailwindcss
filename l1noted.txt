@@ -66,6 +66,21 @@ Connect  tailwind.config.js to owner using file (public > html,css,js)
 
         npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
+     ->terimal
+        npm run build
+
+ -watch
+    ->go to package.json & write down
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tailwind -i ./tailwind/main.css -o ./public/tailwind.css",
+        "watch": "tailwindcss -i ./tailwind/main.css -o ./public/tailwind.css --watch"
+    },
+
+    ->terimal
+        npm run watch
+
+
  Note:
  . = current folder
  ** = all folder of inside in public folder
