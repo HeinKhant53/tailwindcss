@@ -1949,16 +1949,16 @@ video {
   cursor: move;
 }
 
-.cursor-no-drop {
-  cursor: no-drop;
-}
-
 .cursor-grab {
   cursor: grab;
 }
 
 .cursor-grabbing {
   cursor: grabbing;
+}
+
+.cursor-no-drop {
+  cursor: no-drop;
 }
 
 .cursor-not-allowed {
@@ -3730,6 +3730,18 @@ video {
 
 .underline-offset-auto {
   text-underline-offset: auto;
+}
+
+.accent-zinc-500 {
+  accent-color: #71717a;
+}
+
+.accent-rose-500 {
+  accent-color: #f43f5e;
+}
+
+.accent-teal-500 {
+  accent-color: #14b8a6;
 }
 
 .opacity-0 {
