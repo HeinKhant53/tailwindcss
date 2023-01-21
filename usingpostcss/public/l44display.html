@@ -22,13 +22,15 @@
     .div1{
         width: 100px;
         height: 100px;
-        background-color: grey;
+        background-color: black;
+        color: #fff;
     }
 
     .div2{
         width: 100px;
         height: 100px;
         background-color: orange;
+        color: #fff;
     }
         
     </style>
@@ -36,71 +38,113 @@
 <body>
     
     <h1>This is tailwind css.</h1>
-
+    <!-- flex ka horizontal & grid ka vertical -->
+    <h1>flex</h1>
     <div class="box flex">
         <div class="div1">1</div>
         <div class="div2">2</div>
     </div>
 
+
+    <br/>
     <br/>
 
-    <div class="box flex justify-start">
+    <h1>grid</h1>
+    <div class="box grid">   <!--column ka ma par lo -> vertical -->
         <div class="div1">1</div>
         <div class="div2">2</div>
+    </div>
+    
+
+    <br/>
+    <br/>
+    <hr/>
+
+    <h1>justify-content (Parent) with flex & grid</h1> 
+    <div class="box flex justify-start">
+        <div class="div1">1</div>
     </div>
 
     <br/>
 
     <div class="box flex justify-center">
         <div class="div1">1</div>
-        <div class="div2">2</div>
     </div>
 
     <br/>
 
     <div class="box flex justify-end">
         <div class="div1">1</div>
-        <div class="div2">2</div>
     </div>
 
     <br/>
 
-
-    <div class="bigbox flex justify-end">
+    <div class="bigbox flex justify-between">
         <div class="div1">1</div>
         <div class="div2">2</div>
     </div>
 
     <br/>
 
-    <div class="bigbox flex justify-end">
+    <div class="box grid justify-start">
+        <div class="div1">1</div>
+    </div>
+
+    <br/>
+
+    <div class="box grid justify-center">
+        <div class="div1">1</div>
+    </div>
+
+    <br/>
+
+    <div class="box grid justify-end">
+        <div class="div1">1</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid justify-between">
         <div class="div1">1</div>
         <div class="div2">2</div>
     </div>
 
     <br/>
+    <br/>
+    <hr/>
+
+    <h1>aligin-items (Parent)</h1>
 
     <div class="bigbox flex items-start">
         <div class="div1">1</div>
-        <div class="div2">2</div>
     </div>
 
     <br/>
 
     <div class="bigbox flex items-center">
         <div class="div1">1</div>
-        <div class="div2">2</div>
     </div>
-
 
     <br/>
 
     <div class="bigbox flex items-end">
         <div class="div1">1</div>
-        <div class="div2">2</div>
     </div>
    
     <br/>
+    <br/>
+    <hr/>
+
+    <h1>justify-content & aligin-items (Parent)</h1>
+    <div class="bigbox flex justify-center items-center">
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+    <br/>
+    <hr/>
+
+
 
     <h1 class="bg-green-500 inline">Save Myanmar</h1>
     <h1 class="bg-green-500 inline">Pray Myanmar</h1>
@@ -121,7 +165,184 @@
     <span class="bg-sky-300 hidden">Bye Indonesia</span>
 
     <br/>
+    <br/>
+    <hr/>
 
+    <h1>justify-items (Parent) with grid</h1>
+
+    <div class="bigbox grid justify-items-start">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid justify-items-center">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid justify-items-end">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid justify-items-stretch">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+    <br/>
+    <hr/>
+
+    <h1>justify-self with grid (children)</h1>
+    <div class="bigbox grid">
+        <div class="div1 justify-self-start">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid">
+        <div class="div1 justify-self-center">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid">
+        <div class="div1 justify-self-end">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid">
+        <div class="div1 justify-self-auto">1</div>
+        <div class="div2">2</div>
+    </div>
+
+    <br/>
+    <br/>
+    <hr/>
+
+    <h1>align-self with flex (children)</h1>
+    <div class="bigbox flex">
+        <div class="div1">1</div>
+        <div class="div2 self-start">2</div>
+        <div class="div1">3</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox flex">
+        <div class="div1">1</div>
+        <div class="div2 self-center">2</div>
+        <div class="div1">3</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox flex">
+        <div class="div1">1</div>
+        <div class="div2 self-end">2</div>
+        <div class="div1">3</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox flex">
+        <div class="div1">1</div>
+        <div class="div2 self-auto">2</div>
+        <div class="div1">3</div>
+    </div>
+
+    <br/>
+    <br/>
+    <hr/>
+
+    <h1>align-content with </h1>
+    <div class="bigbox grid grid-cols-3 content-start" style="height: 300px;">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+        <div class="div2">5</div>
+        <div class="div2">6</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid grid-cols-3 content-center" style="height: 300px;">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+        <div class="div2">5</div>
+        <div class="div2">6</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid grid-cols-3 content-end" style="height: 300px;">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+        <div class="div2">5</div>
+        <div class="div2">6</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid grid-cols-3 content-between" style="height: 300px;">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+        <div class="div2">5</div>
+        <div class="div2">6</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid grid-cols-3 content-around" style="height: 300px;">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+        <div class="div2">5</div>
+        <div class="div2">6</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid grid-cols-3 content-evenly" style="height: 300px;">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+        <div class="div2">5</div>
+        <div class="div2">6</div>
+    </div>
+
+    <br/>
+
+    <div class="bigbox grid grid-cols-3 content-baseline" style="height: 300px;">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+        <div class="div2">5</div>
+        <div class="div2">6</div>
+    </div>
+
+    <br/>
 
 
 </body>
@@ -129,14 +350,14 @@
 
 <!-- 
 
-    flex        display:flex;
     inline      display:inline;
     block       display:block;
     hidden      display:none;
+    flex        display:flex;
     grid        display:grid;
  -->
 
- <!-- 
+ <!-- justify-content -> flex & grid (parent)
 
     justify-start       justify-content:start;
     justify-end         justify-content:end;
@@ -147,12 +368,59 @@
 
   -->
 
-  <!-- 
+
+<!-- justify-items -> gird (parent)
+  
+  justify-items-start       justify-items:start;
+  justify-items-center      justify-items:center;
+  justify-items-end         justify-items:end;
+  justify-items-stretch     justify-items:stretch;
+
+-->
+
+<!-- justify-self -> grid (self)
+
+    justify-self-auto               justify-self:auto;  //width shi ta lote stretch
+    justify-self-start              justify-self:start;
+    justify-self-center             justify-self:center;
+    justify-self-end                justify-self:end;
+    justify-self-stretch            justify-self:stretch;
+ -->
+
+
+
+ 
+  <!--align-item ->  flex  (parent) 
 
     items-start         aligin-items:start;
     items-center        aligin-items:center;
     items-end           aligin-items:end;
    -->
+
+   <!-- alig-self -> flex (self)
+
+    self-auto               align-self:auto;  //width shi ta lote stretch
+    self-start              align-self:start;
+    self-center             align-self:center;
+    self-end                align-self:end;
+    self-stretch            align-self:stretch;
+    self-baseline           align-self:baseline;
+ -->
+
+
+ <!-- align-content -> parent grid grid-cols-number 
+    content-start               align-content: flex-start;
+    content-center              align-content: center;
+    content-end                 align-content: flex-end;
+
+
+
+    content-between            align-content: space-between;
+    content-around              align-content: space-around;
+    content-evenly              align-content: space-evenly;
+    content-baseline              align-content: baseline; 
+-->
+
 
 
 
